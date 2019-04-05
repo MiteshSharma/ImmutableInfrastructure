@@ -9,7 +9,7 @@ data "aws_ami" "ec2-ami" {
     name   = "state"
     values = ["available"]
   }
-
+  owners  = ["self"]
   filter {
     name   = "tag:Name"
     values = ["Packer-Ansible"]
